@@ -28,6 +28,8 @@ jobs:
           echo "Running lint checks"
 
       - name: Run Unit Tests
+        env:
+          PYTHONPATH: .
         run: |
           pytest
       
