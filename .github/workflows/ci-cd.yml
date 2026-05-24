@@ -41,10 +41,7 @@ jobs:
       
       - name: Run Container Validation
         run: |
-          docker run -d -p 8000:8000 \
-          --name genai-container \
-          -e GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
-          genai-platform:${{ github.sha }}
+          docker run -d -p 8000:8000 --name genai-container -e GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }} genai-platform:${{ github.sha }}
       
       - name: Health Check
         run: |
