@@ -30,6 +30,7 @@ jobs:
       - name: Run Unit Tests
         env:
           PYTHONPATH: .
+          GEMINI_API_KEY: "mock_api_key_for_testing"
         run: |
           pytest
       
